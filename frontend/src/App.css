@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global reset and font styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f3f4f6 0%, #d1d5db 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container:hover {
+  transform: scale(1.02);
 }
 
-.card {
-  padding: 2em;
+/* Category Card Styling */
+.category-card {
+  margin-bottom: 30px;
 }
 
-.read-the-docs {
-  color: #888;
+.category-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.level-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 15px;
+}
+
+.topics {
+  padding-left: 20px;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.topic:hover {
+  background-color: #f9fafb;
+  transform: translateX(10px);
+}
+
+.topic input {
+  margin-right: 12px;
+  accent-color: #4f46e5;
+  transition: transform 0.3s ease;
+}
+
+.topic input:checked {
+  transform: scale(1.2);
+}
+
+.topic-label {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Save Button Styling */
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.save-button {
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #4338ca;
+}
+
+.save-button:active {
+  transform: scale(0.98);
+}
+
+.save-button:focus {
+  outline: none;
 }
